@@ -1,0 +1,198 @@
+<head>
+    <style>
+        img {
+            border-radius: 10px;
+        }
+
+        .tab {
+            display: inline-block;
+            margin-left: 40px;
+        }
+
+        p,
+        h1,
+        h2,
+        h3 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .code {
+            font-family: "Lucida Console", "Courier New", monospace;
+            background-color: black;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lab Assignment #1: LEDs and Push Buttons<br>
+        2023-09-19</h1>
+
+    <h2>Project 1.1</h2>
+    <h3>Breadboard Settings</h3>
+    <img src="Project_1_1.jpg" width="708" height="708">
+
+    <h3>Video</h3>
+    <video controls autoplay>
+        <source src="Project_1_1.mov" type="video/mp4">
+    </video>
+
+    <h2>Project 1.2</h2>
+    <h3>Breadboard Settings</h3>
+    <img src="Project_1_2.jpg" width="708" height="708">
+
+    <h3>Video</h3>
+    <video controls autoplay>
+        <source src="Project_1_2.mov" type="video/mp4">
+    </video>
+
+    <h2>Project #1</h2>
+
+    <h3>Description of what the lab assignment is about</h3>
+    <p>This lab assignment is about being able to properly use the combination of Thonny, ESP32, and components such
+        as<br>
+        LED's to produce lights that will blink in succession
+    </p>
+
+    <h3>List of Hardware Compnents</h3>
+
+    <ul>
+        <li>3 x LED's (red, green, blue)</li>
+        <li>6 x wires</li>
+        <li>3 x 220-ohm resistor</li>
+        <li>ESP 32</li>
+    </ul>
+    <h3>Circuit Diagram</h3>
+    <img src="Project1CircuitDiagram.jpg" width="708" height="531">
+
+    <h3>Breadboard Diagram</h3>
+    <img src="Project1BreadBoardDiagram.jpg" width="1400" height="531">
+
+    <h3>Breadboard Settings</h3>
+    <img src="Project1.jpg" width="708" height="531">
+
+    <h3>Video</h3>
+    <video controls autoplay>
+        <source src="Project1.mov" type="video/mp4">
+    </video>
+
+    <h3>Source Code</h3>
+    <p class="code">from time import sleep_ms<br>
+        from machine import Pin<br>
+        <br>
+        led1 = Pin(4, Pin.OUT) #create LED object from pin2,Set Pin2 to output<br>
+        led2 = Pin(2, Pin.OUT)<br>
+        led3 = Pin(5, Pin.OUT)<br>
+        try:<br>
+        <span class="tab"></span>while True:<br>
+        <span class="tab"></span><span class="tab"></span>#led 1: red<br>
+        <span class="tab"></span><span class="tab"></span>led1.value(1) #Set led turn on<br>
+        <span class="tab"></span><span class="tab"></span>sleep_ms(1000)<br>
+        <span class="tab"></span><span class="tab"></span>led1.value(0) #Set led turn off<br>
+        <span class="tab"></span><span class="tab"></span>sleep_ms(200)<br>
+        <br>
+        <span class="tab"></span><span class="tab"></span>#led 2: green<br>
+        <span class="tab"></span><span class="tab"></span>led2.value(1) #Set led turn on<br>
+        <span class="tab"></span><span class="tab"></span>sleep_ms(1000)<br>
+        <span class="tab"></span><span class="tab"></span>led2.value(0) #Set led turn off<br>
+        <span class="tab"></span><span class="tab"></span>sleep_ms(200)<br>
+        <br>
+        <span class="tab"></span><span class="tab"></span>#led 3: blue<br>
+        <span class="tab"></span><span class="tab"></span>led3.value(1) #Set led turn on<br>
+        <span class="tab"></span><span class="tab"></span>sleep_ms(1000)<br>
+        <span class="tab"></span><span class="tab"></span>led3.value(0) #Set led turn off<br>
+        <span class="tab"></span><span class="tab"></span>sleep_ms(200)<br>
+        except:<br>
+        <span class="tab"></span>pass<br>
+    </p>
+
+    <h2>Project 2.1</h2>
+    <h3>Breadboard Settings</h3>
+    <img src="Project_2_1&_2_2.jpg" width="708" height="708">
+
+    <h3>Video</h3>
+    <video controls autoplay>
+        <source src="Project_2_1.mov" type="video/mp4">
+    </video>
+
+    <h2>Project 2.2</h2>
+    <h3>Breadboard Settings</h3>
+    <img src="Project_2_1&_2_2.jpg" width="708" height="708">
+
+    <h3>Video</h3>
+    <video controls autoplay>
+        <source src="Project_2_2.mov" type="video/mp4">
+    </video>
+
+    <h2>Project #2</h2>
+
+    <h3>Description of what the lab assignment is about</h3>
+    <p>This lab assignment is about being able to properly use the knowledge from the previous lab and combine with the
+        use of push buttons to create a light that will turn on when a button is pressed, but will only turn off if
+        another button is pressed.
+    </p>
+
+    <h3>List of Hardware Compnents</h3>
+
+    <ul>
+        <li>1 x LED (red)</li>
+        <li>6 x wires</li>
+        <li>1 x 220-ohm resistor</li>
+        <li>4 x 10k-orm resistor</li>
+        <li>2 x push buttons</li>
+        <li>ESP 32</li>
+    </ul>
+
+    <h3>Circuit Diagram</h3>
+    <img src="Project2CircuitDiagram.jpg" width="708" height="531">
+
+    <h3>Breadboard Diagram</h3>
+    <img src="Project2BreadBoardDiagram.jpg" width="1400" height="531">
+
+    <h3>Breadboard Settings</h3>
+    <img src="Project2.jpg" width="708" height="708">
+
+    <h3>Video</h3>
+    <video controls autoplay>
+        <source src="Project2.mov" type="video/mp4">
+    </video>
+
+    <h3>Source Code</h3>
+    <p class="code">import time<br>
+        from machine import Pin<br>
+        <br>
+        led = Pin(2, Pin.OUT)<br>
+        button1 = Pin(13, Pin.IN,Pin.PULL_UP)<br>
+        button2 = Pin(12, Pin.IN,Pin.PULL_UP)<br>
+        lastPressed = None<br>
+        <br>
+        <br>
+        def reverseGPIO():<br>
+        <span class="tab"></span>if led.value():<br>
+        <span class="tab"></span><span class="tab"></span>led.value(0)<br>
+        <span class="tab"></span>else:<br>
+        <span class="tab"></span><span class="tab"></span>led.value(1)<br>
+        <br>
+        while True:<br>
+        <span class="tab"></span>if not button1.value():<br>
+        <span class="tab"></span><span class="tab"></span>time.sleep_ms(20)<br>
+        <span class="tab"></span><span class="tab"></span>if not button1.value() and lastPressed != 1:<br>
+        <span class="tab"></span><span class="tab"></span><span class="tab"></span>lastPressed = 1<br>
+        <span class="tab"></span><span class="tab"></span><span class="tab"></span>reverseGPIO()<br>
+        <br>
+        <span class="tab"></span><span class="tab"></span><span class="tab"></span>while not button2.value():<br>
+        <span class="tab"></span><span class="tab"></span><span class="tab"></span>time.sleep_ms(20)<br>
+        <br>
+        <span class="tab"></span>if not button2.value():<br>
+        <span class="tab"></span><span class="tab"></span>time.sleep_ms(20)<br>
+        <span class="tab"></span><span class="tab"></span>if not button2.value() and lastPressed != 2:<br>
+        <span class="tab"></span><span class="tab"></span><span class="tab"></span>lastPressed = 2<br>
+        <span class="tab"></span><span class="tab"></span><span class="tab"></span>reverseGPIO()<br>
+        <br>
+        <span class="tab"></span><span class="tab"></span><span class="tab"></span>while not button1.value():<br>
+        <span class="tab"></span><span class="tab"></span><span class="tab"></span>time.sleep_ms(20)<br>
+        <br>
+    </p>
+
+
+</body>
